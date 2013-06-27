@@ -1,0 +1,19 @@
+<p>I can put html here</p>
+<% "I can put ruby here" %>
+<% "Ruby without a equal sign a the beginning the ERB wont oupput to html"%>
+
+<p>variables from the GET colors route are usable in the ruby code here</p>
+<p> they must be instance variables such as @colors</p>
+
+
+<form action "/new_color" method = "get">
+<input type = "text" name= "color"/>
+<button>Create new button</button>
+</form>
+<ul>
+<% @colors.each do |color| %>
+  <p><%= color %></p>
+  <% end %>
+</ul>
+
+
